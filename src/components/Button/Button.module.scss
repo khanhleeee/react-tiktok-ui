@@ -1,0 +1,96 @@
+.wrapper {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.6rem;
+   font-weight: 600;
+   line-height: 1.6rem;
+   min-width: 100px;
+   min-height: 36px;
+   border-radius: 4px;
+   padding: 8px 16px;
+   background-color: var(--white);
+   border: 1px solid rgba(22, 24, 35, 0.12);
+   cursor: pointer;
+   user-select: none;
+
+   &:hover {
+      background-color: rgba(22, 24, 35, 0.03);
+   }
+   &:nth-child(1) {
+      margin-left: 6px;
+   }
+   + .wrapper {
+      margin-left: 8px;
+   }
+   &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+   }
+}
+// Button types
+.pill {
+   font-weight: 700;
+   font-size: 1.4rem;
+   color: rgba(22, 24, 35, 0.75);
+   border-radius: 18px;
+
+   &:hover {
+      border-color: rgba(22, 24, 35, 0.2);
+      background-color: rgba(22, 24, 35, 0.03);
+   }
+}
+.primary {
+   font-weight: 700;
+   color: var(--white);
+   background-color: var(--primary);
+   border-color: var(--primary);
+
+   &:hover {
+      background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.06),
+            rgba(0, 0, 0, 0.06)
+         ),
+         #fe2c55;
+      border-color: var(--primary);
+   }
+}
+.outline {
+   color: var(--primary);
+   font-weight: 700;
+   border-color: currentColor;
+   background-color: rgba(255, 255, 255, 1);
+
+   &:hover {
+      background-color: rgba(254, 44, 85, 0.06);
+      border-color: currentColor;
+   }
+}
+.text {
+   border: none;
+
+   &:hover {
+      background-color: transparent;
+   }
+}
+.title + .icon,
+.icon + .title {
+   margin-left: 8px;
+}
+.icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 24px;
+}
+// Button size
+.small {
+   min-width: 88px;
+   min-height: 0;
+   padding: 5px 16px;
+}
+.large {
+   padding: 15px 16px;
+   min-width: 144px;
+}
